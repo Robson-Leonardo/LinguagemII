@@ -33,13 +33,12 @@ def funcao():
                   qnt += 1
 
 
-            returno = "Estimado: " + tempo + " segundos \n"
+            retorno = "Estimado: " + tempo + " segundos \n"
             retorno += "Dentro:" + qnt + "Fora:" + str(n - qnt) + "\n"
-            retorno += "Probalidade de cair dentro do circulo:" +
-                  str(round((qnt/n * quadradoArea) /quadradoArea, 5)) + "\n" +
+            retorno += "Probalidade de cair dentro do circulo:" + str(round((qnt/n * quadradoArea) /quadradoArea, 5)) + "\n"
             retorno += "Estimativa do PI:" + str((qnt/n) * quadradoArea)
             retrono += "Tempo que levou para calcular:" + str(round(time.perf_counter() - inicio, 5))
-
+            return retorno
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
