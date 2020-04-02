@@ -25,13 +25,12 @@ def funcao():
 
       tempo = (n/10000)*0.05812
       print("Seu teste vai demorar", tempo, "de segundos, quer continuar? 1 SIM: ", end = '')
-      if int(input()) == 1:
-            inicio = time.perf_counter()
-            for x in range(n):
-                  total -=1
-                  if circulo1.dentro((uniform(-1 * circulo1.raio, circulo1.raio),
-                                    uniform(-1 * circulo1.raio, circulo1.raio))) is True:
-                        qnt += 1
+      inicio = time.perf_counter()
+      for x in range(n):
+            total -=1
+            if circulo1.dentro((uniform(-1 * circulo1.raio, circulo1.raio),
+                              uniform(-1 * circulo1.raio, circulo1.raio))) is True:
+                  qnt += 1
 
 
             print("Estimado:", tempo, "segundos")
