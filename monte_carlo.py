@@ -15,7 +15,7 @@ app = Flask(__name__)
 @app.route('/')
 
 def funcao():
-      n = int(input("Quantos pontos quer usar para o teste: "))
+      n = 1000000
 
       circulo1 = geometria.Circulo(1, (0, 0))
       circulo1.imprime_dados()
