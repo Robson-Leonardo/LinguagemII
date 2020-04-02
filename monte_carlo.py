@@ -33,8 +33,8 @@ def funcao():
                   qnt += 1
 
 
-            retorno = "Estimado: " + tempo + " segundos \n"
-            retorno += "Dentro:" + qnt + "Fora:" + str(n - qnt) + "\n"
+            retorno = "Estimado: " + str(tempo) + " segundos \n"
+            retorno += "Dentro:" + str(qnt) + "Fora:" + str(n - qnt) + "\n"
             retorno += "Probalidade de cair dentro do circulo:" + str(round((qnt/n * quadradoArea) /quadradoArea, 5)) + "\n"
             retorno += "Estimativa do PI:" + str((qnt/n) * quadradoArea)
             retrono += "Tempo que levou para calcular:" + str(round(time.perf_counter() - inicio, 5))
