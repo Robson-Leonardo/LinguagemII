@@ -32,15 +32,21 @@ def funcao():
                               uniform(-1 * circulo1.raio, circulo1.raio))) is True:
                   qnt += 1
 
+            
+      retorno = "Dentro: {0}, Fora: {1}\n\
+                 Problabilidade de cair dentro do circulo {2:5f}\n\
+                 Estimativa do PI: {3:f}\n\
+                 Tempo que levou para calcular: {4:5f}".format(qnt, 
+                                                              n-qnt, 
+                                                              (qnt/n * quadradoArea) / quadradoArea, 
+                                                              (qnt/n) * quadradoArea, 
+                                                              time.perf_counter() - inicio)
+      return retorno
 
-            retorno = "Estimado: " + str(tempo) + " segundos \n"
-            retorno += "Dentro:" + str(qnt) + "Fora:" + str(n - qnt) + "\n"
-            retorno += "Probalidade de cair dentro do circulo:" + str(round((qnt/n * quadradoArea) /quadradoArea, 5)) + "\n"
-            retorno += "Estimativa do PI:" + str((qnt/n) * quadradoArea)
-            retorno += "Tempo que levou para calcular:" + str(round(time.perf_counter() - inicio, 5))
-            return retorno
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
 
 #---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+---#
+
+
