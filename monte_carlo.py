@@ -24,7 +24,7 @@ def funcao():
       total = n
 
       tempo = (n/10000)*0.05812
-      print("Seu teste vai demorar", tempo, "de segundos, quer continuar? 1 SIM: ", end = '')
+      #print("Seu teste vai demorar", tempo, "de segundos, quer continuar? 1 SIM: ", end = '')
       inicio = time.perf_counter()
       for x in range(n):
             total -=1
@@ -33,12 +33,12 @@ def funcao():
                   qnt += 1
 
 
-            print("Estimado:", tempo, "segundos")
-            print("Dentro:", qnt, "Fora:", n - qnt)
-            print("Probalidade de cair dentro do circulo:",
-                  round((qnt/n * quadradoArea) /quadradoArea, 5))
-            print("Estimativa do PI:", (qnt/n) * quadradoArea)
-            print("Tempo que levou para calcular:", round(time.perf_counter() - inicio, 5))
+            returno = "Estimado: " + tempo + " segundos \n"
+            retorno += "Dentro:" + qnt + "Fora:" + str(n - qnt) + "\n"
+            retorno += "Probalidade de cair dentro do circulo:" +
+                  str(round((qnt/n * quadradoArea) /quadradoArea, 5)) + "\n" +
+            retorno += "Estimativa do PI:" + str((qnt/n) * quadradoArea)
+            retrono += "Tempo que levou para calcular:" + str(round(time.perf_counter() - inicio, 5))
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
